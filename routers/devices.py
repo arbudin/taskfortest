@@ -52,7 +52,6 @@ def update_device(device_id: int, device_update: DeviceUpdate, db = Depends(get_
             device_update.name,
             device_update.version,
             device_update.status,
-            device_update.device_id,
             device_id
         ))
 
@@ -68,6 +67,11 @@ def update_device(device_id: int, device_update: DeviceUpdate, db = Depends(get_
 def delete_device(device_id: int):
     with get_db() as conn:
         with conn.cursor() as cursor:
+            cursor.execute(
+                "UPDATE batteries SET device_id = NULL WHERE device_id = %s",
+                (device_id,)
+            )
+
             cursor.execute("DELETE FROM devices WHERE id = %s", (device_id,))
 
             if cursor.rowcount == 0:

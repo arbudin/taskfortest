@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Battery Monitor — Admin</title>
+  <link rel="stylesheet" href="/static/styles.css" />
+</head>
+<body>
+  <header><h1>Мониторинг батарей</h1></header>
+
+  <main class="container">
+    <!-- Устройства -->
+    <section id="devices-section">
+      <div class="section-header">
+        <h2>Устройства <span id="devices-count" class="count">—</span></h2>
+        <div class="right-controls">
+          <button id="btn-new-device">Создать устройство</button>
+        </div>
+      </div>
+      <ul id="devices-list"></ul>
+    </section>
+
+    <!-- Батареи -->
+    <section id="batteries-section">
+      <div class="section-header">
+        <h2>Батареи <span id="batteries-count" class="count">—</span></h2>
+        <div class="right-controls">
+          <button id="btn-new-battery">Создать батарею</button>
+        </div>
+      </div>
+      <ul id="batteries-list"></ul>
+    </section>
+
+    <!-- Модал -->
+    <div id="modal" class="hidden">
+      <div class="modal-content">
+        <button id="modal-close">✖</button>
+        <div id="modal-body"></div>
+      </div>
+    </div>
+  </main>
+
+  <script src="/static/app.js"></script>
+</body>
+</html>

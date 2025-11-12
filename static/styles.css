@@ -1,0 +1,38 @@
+:root{font-family:Inter, system-ui, sans-serif; color:#222}
+
+body{margin:0;padding:0;background:#f4f6f8}
+
+header{background:#0b5cff;color:white;padding:12px}
+
+.container{display:flex;gap:20px;padding:20px}
+
+section{background:white;padding:12px;border-radius:8px;flex:1;min-width:320px}
+
+ul{list-style:none;padding:0;margin:0}
+
+li{padding:8px 10px;border-bottom:1px solid #eee;display:flex;justify-content:space-between;align-items:center}
+
+button{cursor:pointer;padding:6px 8px;border-radius:6px;border:1px solid #ccc;background:#fff}
+
+.toolbar{display:flex;gap:10px}
+
+
+#modal.hidden { display: none; }
+
+#modal{position:fixed;inset:0;background:rgba(0,0,0,.35);display:flex;align-items:center;justify-content:center}
+
+.modal-content{background:white;padding:16px;border-radius:8px;min-width:320px;position:relative}
+
+#modal-close{
+    position:absolute;
+    right:8px;
+    top:8px;
+    border:none;
+    background:transparent;
+    font-size:18px}
+
+input,select{
+    padding:6px;
+    width:100%;
+    box-sizing:border-box;
+    margin:6px 0}
